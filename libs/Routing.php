@@ -6,8 +6,11 @@ $request=explode('/',$request);
 if(file_exists('Controllers/'.$request[2].'.php')){
 
     require('Controllers/'.$request[2].".php");
-    $model=ucfirst($request[2]);
-    require('Models/'.$request[2]."_model.php");
+    $model=ucfirst($request[2])."_model";
+    if($request[2] !="errors"){
+
+    require('Models/'.$model.".php");
+    }
 }
 $currentmodel= new  $model;
 $currentcontroller= new $request[2]($currentmodel);
