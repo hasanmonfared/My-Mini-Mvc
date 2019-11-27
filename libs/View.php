@@ -5,13 +5,26 @@ class View
     {
 
     }
-    public function render($name, $param = array())
+    public function render($name, $params = array(),$flag=0)
     {
+        if($flag==0){
 
-        extract($param);
-        require "Views/layout/header.php";
-        require "Views//$name.php";
-        require "Views/layout/footer.php";
+            $this->header();
+        }
+        extract($params);
+        require "Views/$name.php";
+        if ($flag==0) {
+            $this->footer();
+            
+        }
         return;
+    }
+    public function header()
+    {
+        require "Views/layout/header.php";
+    }
+    public function footer()
+    {
+        require "Views/layout/footer.php";
     }
 }
