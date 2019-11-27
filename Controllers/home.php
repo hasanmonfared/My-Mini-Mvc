@@ -1,13 +1,16 @@
 <?php
 class Home extends Controller
 {
-    public function __construct()
+public $mymodel;
+    public function __construct($model)
     {
         parent::__construct();
+        $this->mymodel=$model;
     }
     public function index()
     {
-        $this->viewObject->render('home', array('row' => 17));
+       
+        $this->viewObject->render('home');
 
     }
 }
