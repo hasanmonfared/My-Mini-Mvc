@@ -7,4 +7,10 @@ $dotenv = Dotenv\Dotenv::create(__DIR__);
 $dotenv->load();
 
 
+
+// requrired base file
+require_once "libs/Model.php";
+require_once "libs/View.php";
+require_once "libs/Controller.php";
+
 ?>
