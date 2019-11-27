@@ -7,7 +7,7 @@ if(file_exists('Controllers/'.$request[2].'.php')){
 
     require('Controllers/'.$request[2].".php");
     $model=ucfirst($request[2]);
-    require('Models/'.$request[2].".php");
+    require('Models/'.$request[2]."_model.php");
 }
 $currentmodel= new  $model;
 $currentcontroller= new $request[2]($currentmodel);
