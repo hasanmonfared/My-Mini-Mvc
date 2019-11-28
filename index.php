@@ -11,6 +11,7 @@ define('URL', $_SERVER["REQUEST_SCHEME"] . "://" . $_SERVER["HTTP_HOST"] . "/My-
 define('URL_JS', '/libs/asstes/js');
 define('URL_CSS', '/libs/asstes/css');
 // requrired base file
+require_once "libs/Session.php";
 require_once "libs/Model.php";
 require_once "libs/View.php";
 require_once "libs/Controller.php";
